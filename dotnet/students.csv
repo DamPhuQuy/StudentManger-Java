@@ -1,0 +1,11 @@
+﻿StudentId,FullName,DateOfBirth,Email,PhoneNumber,Major,Address,EnrollmentDate,Status
+SV001,Nguyen Van An,15/05/2003,nvan@student.edu,0901234567,Computer Science,123 Nguyen Hue St,01/09/2021,Active
+SV002,Tran Thi Binh,20/08/2003,ttbinh@student.edu,0902345678,Computer Science,456 Le Loi St,01/09/2021,Active
+SV003,Le Van Cuong,10/03/2003,lvcuong@student.edu,0903456789,Information Technology,789 Tran Phu St,01/09/2021,Active
+SV004,Pham Thi Dung,25/11/2002,ptdung@student.edu,0904567890,Software Engineering,321 Hai Ba Trung St,01/09/2020,Active
+SV005,Hoang Van Em,18/07/2003,hvem@student.edu,0905678901,Computer Science,654 Ly Thuong Kiet St,01/09/2021,Active
+SV006,Vo Thi Phuong,05/12/2002,vtphuong@student.edu,0906789012,Information Technology,987 Bach Dang St,01/09/2020,Active
+SV007,Do Van Giang,30/01/2004,dvgiang@student.edu,0907890123,Software Engineering,147 Phan Chu Trinh St,01/09/2022,Active
+SV008,Bui Thi Ha,14/09/2003,btha@student.edu,0908901234,Computer Science,258 Vo Thi Sau St,01/09/2021,Active
+SV009,Ngo Van Hung,22/04/2002,nvhung@student.edu,0909012345,Information Technology,369 Dien Bien Phu St,01/09/2020,Active
+SV010,Dang Thi Kim,08/06/2003,dtkim@student.edu,0910123456,Software Engineering,741 Nguyen Trai St,01/09/2021,Active
