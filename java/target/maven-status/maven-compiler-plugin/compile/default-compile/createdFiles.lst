@@ -1,0 +1,9 @@
+com\studentmanagement\app\config\OpenApiConfig.class
+com\studentmanagement\app\entity\Student.class
+com\studentmanagement\app\config\DatasourceConfig.class
+com\studentmanagement\app\repository\StudentRepository.class
+com\studentmanagement\app\repository\BaseRepository.class
+com\studentmanagement\app\Application.class
+com\studentmanagement\app\controller\StudentController.class
+com\studentmanagement\app\config\DatabaseConfig.class
+com\studentmanagement\app\service\StudentService.class
