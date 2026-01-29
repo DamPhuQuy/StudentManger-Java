@@ -1,0 +1,22 @@
+﻿namespace StudentManagement.Models;
+
+/// <summary>
+/// Represents enrollment of a student in a course
+/// </summary>
+public class Enrollment
+{
+    public string EnrollmentId { get; set; } = string.Empty;
+    public string StudentId { get; set; } = string.Empty;
+    public string CourseId { get; set; } = string.Empty;
+    public DateTime EnrollmentDate { get; set; }
+    public string Status { get; set; } = "Enrolled"; // Enrolled, Completed, Dropped
+    public string? DropReason { get; set; }
+    public Student? Student { get; set; }
+    public Course? Course { get; set; }
+    public Grade? Grade { get; set; }
+
+    public override string ToString()
+    {
+        return $"{StudentId} -> {CourseId} ({Status})";
+    }
+}

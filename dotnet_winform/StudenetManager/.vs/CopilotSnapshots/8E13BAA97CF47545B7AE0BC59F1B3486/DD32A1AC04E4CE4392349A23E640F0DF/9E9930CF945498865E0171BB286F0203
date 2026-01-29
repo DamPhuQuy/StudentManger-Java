@@ -1,0 +1,172 @@
+﻿using StudentManagement.Interfaces;
+using StudentManagement.Models;
+using StudentManagement.Repositories;
+
+namespace StudentManagement.Services;
+
+// CourseService with LINQ - Single Responsibility Principle
+public class CourseService : ICourseService
+{
+    private readonly CourseRepository _courseRepository;
+    private readonly StudentRepository _studentRepository;
+    private readonly EnrollmentRepository _enrollmentRepository;
+
+    public CourseService(
+        CourseRepository courseRepository,
+        StudentRepository studentRepository,
+        EnrollmentRepository enrollmentRepository)
+    {
+        _courseRepository = courseRepository;
+        _studentRepository = studentRepository;
+        _enrollmentRepository = enrollmentRepository;
+    }
+
+    public void AddCourse(Course course)
+    {
+        if (course == null)
+            throw new ArgumentNullException(nameof(course));
+
+        if (string.IsNullOrWhiteSpace(course.CourseId))
+            throw new ArgumentException("Course ID cannot be empty");
+
+        if (_courseRepository.Exists(course.CourseId))
+            throw new InvalidOperationException($"Course with ID {course.CourseId} already exists");
+
+        _courseRepository.Add(course);
+        _courseRepository.SaveChanges();
+        Console.WriteLine($"Course {course.CourseName} added successfully!");
+    }
+
+    public void UpdateCourse(Course course)
+    {
+        if (course == null)
+            throw new ArgumentNullException(nameof(course));
+
+        if (!_courseRepository.Exists(course.CourseId))
+            throw new InvalidOperationException($"Course with ID {course.CourseId} not found");
+
+        _courseRepository.Update(course);
+        _courseRepository.SaveChanges();
+        Console.WriteLine($"Course {course.CourseName} updated successfully!");
+    }
+
+    public Course? GetCourse(string courseId)
+    {
+        var course = _courseRepository.GetById(courseId);
+        if (course != null)
+        {
+            // Attach enrollments using LINQ
+            course.Enrollments = _enrollmentRepository.GetAll()
+                .Where(e => e.CourseId == courseId)
+                .ToList();
+        }
+        return course;
+    }
+
+    public IEnumerable<Course> GetAllCourses()
+    {
+        // Using LINQ for ordering
+        return _courseRepository.GetAll()
+            .OrderBy(c => c.Department)
+            .ThenBy(c => c.CourseName);
+    }
+
+    public IEnumerable<Course> GetCoursesByDepartment(string department)
+    {
+        // Using LINQ with filtering
+        return _courseRepository.GetAll()
+            .Where(c => c.Department.Equals(department, StringComparison.OrdinalIgnoreCase))
+            .OrderBy(c => c.CourseName);
+    }
+
+    public bool EnrollStudent(string studentId, string courseId)
+    {
+        var student = _studentRepository.GetById(studentId);
+        if (student == null)
+        {
+            Console.WriteLine($"Student with ID {studentId} not found");
+            return false;
+        }
+
+        var course = _courseRepository.GetById(courseId);
+        if (course == null)
+        {
+            Console.WriteLine($"Course with ID {courseId} not found");
+            return false;
+        }
+
+        // Check if already enrolled using LINQ
+        var existingEnrollment = _enrollmentRepository.GetAll()
+            .FirstOrDefault(e => e.StudentId == studentId && e.CourseId == courseId);
+
+        if (existingEnrollment != null)
+        {
+            Console.WriteLine($"Student {student.FullName} is already enrolled in {course.CourseName}");
+            return false;
+        }
+
+        // Check if course is full using LINQ
+        var currentEnrollmentCount = _enrollmentRepository.GetAll()
+            .Count(e => e.CourseId == courseId);
+
+        if (currentEnrollmentCount >= course.MaxStudents)
+        {
+            Console.WriteLine($"Course {course.CourseName} is full");
+            return false;
+        }
+
+        var enrollment = new Enrollment
+        {
+            StudentId = studentId,
+            CourseId = courseId,
+            EnrollmentDate = DateTime.Now,
+            Status = "Enrolled",
+            EnrollmentStatus = EnrollmentStatus.Enrolled,
+            Student = student,
+            Course = course
+        };
+
+        _enrollmentRepository.Add(enrollment);
+        _enrollmentRepository.SaveChanges();
+        Console.WriteLine($"Student {student.FullName} enrolled in {course.CourseName} successfully!");
+        return true;
+    }
+
+    public bool UnenrollStudent(string studentId, string courseId)
+    {
+        // Using LINQ to find enrollment
+        var enrollment = _enrollmentRepository.GetAll()
+            .FirstOrDefault(e => e.StudentId == studentId && e.CourseId == courseId);
+
+        if (enrollment == null)
+        {
+            Console.WriteLine("Enrollment not found");
+            return false;
+        }
+
+        enrollment.Status = "Withdrawn";
+        enrollment.EnrollmentStatus = EnrollmentStatus.Withdrawn;
+        _enrollmentRepository.Update(enrollment);
+        _enrollmentRepository.SaveChanges();
+        Console.WriteLine("Student unenrolled successfully!");
+        return true;
+    }
+
+    public IEnumerable<Student> GetEnrolledStudents(string courseId)
+    {
+        if (!_courseRepository.Exists(courseId))
+            throw new InvalidOperationException($"Course with ID {courseId} not found");
+
+        // Using LINQ with joins
+        var enrolledStudentIds = _enrollmentRepository.GetAll()
+            .Where(e => e.CourseId == courseId && e.EnrollmentStatus == EnrollmentStatus.Enrolled)
+            .Select(e => e.StudentId)
+            .ToList();
+
+        // Using PLINQ for parallel processing
+        return _studentRepository.GetAll()
+            .AsParallel()
+            .Where(s => enrolledStudentIds.Contains(s.StudentId))
+            .OrderBy(s => s.FullName);
+    }
+}

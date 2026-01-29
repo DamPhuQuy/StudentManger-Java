@@ -1,12 +1,275 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\interfaces\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\interfaces\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\enrollmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\enrollmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\studentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\studentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\utilities\\csvhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\utilities\\csvhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|d:\\java\\projects\\studentmanger-java\\dotnet_winform\\studenetmanager\\winformsapp1\\src\\services\\gradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\src\\services\\gradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GradeService.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\GradeService.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Services\\GradeService.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\GradeService.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Services\\GradeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:49.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CsvHelper.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Utilities\\CsvHelper.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Utilities\\CsvHelper.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Utilities\\CsvHelper.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Utilities\\CsvHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:49.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\User.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\User.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\Student.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Student.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Enrollment.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\Enrollment.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Enrollment.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\Enrollment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Grade.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\Grade.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Grade.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\Grade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\Course.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Course.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\UserRole.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\UserRole.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentStatus.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\StudentStatus.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\StudentStatus.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\StudentStatus.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\StudentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnrollmentStatus.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\EnrollmentStatus.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\EnrollmentStatus.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\EnrollmentStatus.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\EnrollmentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:24:48.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\CourseService.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Services\\CourseService.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\CourseService.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Services\\CourseService.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:14:00.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Services\\AuthService.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Services\\AuthService.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAJcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:13:49.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Repositories\\Repository.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Repositories\\Repository.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:13:32.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IServices.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Interfaces\\IServices.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Interfaces\\IServices.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Interfaces\\IServices.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Interfaces\\IServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:13:26.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\src\\Entities\\Admin.cs",
+              "ToolTip": "D:\\Java\\Projects\\StudentManger-Java\\dotnet_winform\\StudenetManager\\WinFormsApp1\\src\\Entities\\Admin.cs",
+              "RelativeToolTip": "WinFormsApp1\\src\\Entities\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T08:08:38.034Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -66,6 +66,7 @@ public class StudentController {
         @ApiResponse(responseCode = "400", description = "Dữ liệu không hợp lệ")
     })
     public ResponseEntity<Student> createStudent(@RequestBody @Parameter(description = "Thông tin sinh viên cần tạo") Student student) {
+        
         studentService.enrollStudent(student);
         return ResponseEntity.status(HttpStatus.CREATED).body(student);
     }

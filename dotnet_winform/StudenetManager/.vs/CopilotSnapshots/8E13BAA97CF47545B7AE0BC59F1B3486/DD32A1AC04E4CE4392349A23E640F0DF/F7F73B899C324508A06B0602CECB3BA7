@@ -1,0 +1,156 @@
+﻿using StudentManagement.Interfaces;
+using StudentManagement.Models;
+using StudentManagement.Repositories;
+
+namespace StudentManagement.Services;
+
+// GradeService with LINQ - Single Responsibility Principle
+public class GradeService : IGradeService
+{
+    private readonly GradeRepository _gradeRepository;
+    private readonly StudentRepository _studentRepository;
+    private readonly CourseRepository _courseRepository;
+    private readonly EnrollmentRepository _enrollmentRepository;
+
+    public GradeService(
+        GradeRepository gradeRepository,
+        StudentRepository studentRepository,
+        CourseRepository courseRepository,
+        EnrollmentRepository enrollmentRepository)
+    {
+        _gradeRepository = gradeRepository;
+        _studentRepository = studentRepository;
+        _courseRepository = courseRepository;
+        _enrollmentRepository = enrollmentRepository;
+    }
+
+    public void AddGrade(Grade grade)
+    {
+        if (grade == null)
+            throw new ArgumentNullException(nameof(grade));
+
+        if (!_studentRepository.Exists(grade.StudentId))
+            throw new InvalidOperationException($"Student with ID {grade.StudentId} not found");
+
+        if (!_courseRepository.Exists(grade.CourseId))
+            throw new InvalidOperationException($"Course with ID {grade.CourseId} not found");
+
+        // Check if enrollment exists
+        var enrollment = _enrollmentRepository.GetAll()
+            .FirstOrDefault(e => e.StudentId == grade.StudentId && e.CourseId == grade.CourseId);
+
+        if (enrollment == null)
+            throw new InvalidOperationException("Student is not enrolled in this course");
+
+        // Check if grade already exists
+        var existingGrade = _gradeRepository.GetAll()
+            .FirstOrDefault(g => g.StudentId == grade.StudentId && g.CourseId == grade.CourseId);
+
+        if (existingGrade != null)
+            throw new InvalidOperationException("Grade already exists for this student in this course");
+
+        grade.GradedDate = DateTime.Now;
+        _gradeRepository.Add(grade);
+
+        // Update enrollment status
+        enrollment.Status = grade.IsPassing ? EnrollmentStatus.Completed : EnrollmentStatus.Failed;
+        _enrollmentRepository.Update(enrollment);
+
+        _gradeRepository.SaveChanges();
+        _enrollmentRepository.SaveChanges();
+
+        Console.WriteLine($"Grade {grade.NumericGrade:F2} ({grade.LetterGrade}) added successfully!");
+    }
+
+    public void UpdateGrade(string studentId, string courseId, double numericGrade, string gradedBy, string? comments = null)
+    {
+        // Using LINQ to find existing grade
+        var grade = _gradeRepository.GetAll()
+            .FirstOrDefault(g => g.StudentId == studentId && g.CourseId == courseId);
+
+        if (grade == null)
+        {
+            // Create new grade if it doesn't exist
+            grade = new Grade
+            {
+                StudentId = studentId,
+                CourseId = courseId,
+                NumericGrade = numericGrade,
+                GradedBy = gradedBy,
+                Comments = comments ?? string.Empty,
+                GradedDate = DateTime.Now
+            };
+            AddGrade(grade);
+        }
+        else
+        {
+            // Update existing grade
+            grade.NumericGrade = numericGrade;
+            grade.GradedBy = gradedBy;
+            grade.GradedDate = DateTime.Now;
+            if (comments != null)
+                grade.Comments = comments;
+
+            _gradeRepository.Update(grade);
+
+            // Update enrollment status
+            var enrollment = _enrollmentRepository.GetAll()
+                .FirstOrDefault(e => e.StudentId == studentId && e.CourseId == courseId);
+
+            if (enrollment != null)
+            {
+                enrollment.Status = grade.IsPassing ? EnrollmentStatus.Completed : EnrollmentStatus.Failed;
+                _enrollmentRepository.Update(enrollment);
+                _enrollmentRepository.SaveChanges();
+            }
+
+            _gradeRepository.SaveChanges();
+            Console.WriteLine($"Grade updated to {grade.NumericGrade:F2} ({grade.LetterGrade})!");
+        }
+    }
+
+    public Grade? GetGrade(string studentId, string courseId)
+    {
+        return _gradeRepository.GetAll()
+            .FirstOrDefault(g => g.StudentId == studentId && g.CourseId == courseId);
+    }
+
+    public IEnumerable<Grade> GetStudentGrades(string studentId)
+    {
+        if (!_studentRepository.Exists(studentId))
+            throw new InvalidOperationException($"Student with ID {studentId} not found");
+
+        // Using LINQ for filtering and ordering
+        return _gradeRepository.GetAll()
+            .Where(g => g.StudentId == studentId)
+            .OrderByDescending(g => g.GradedDate);
+    }
+
+    public IEnumerable<Grade> GetCourseGrades(string courseId)
+    {
+        if (!_courseRepository.Exists(courseId))
+            throw new InvalidOperationException($"Course with ID {courseId} not found");
+
+        // Using LINQ for filtering and ordering
+        return _gradeRepository.GetAll()
+            .Where(g => g.CourseId == courseId)
+            .OrderByDescending(g => g.NumericGrade);
+    }
+
+    public double CalculateStudentGPA(string studentId)
+    {
+        if (!_studentRepository.Exists(studentId))
+            throw new InvalidOperationException($"Student with ID {studentId} not found");
+
+        // Using LINQ for GPA calculation
+        var grades = _gradeRepository.GetAll()
+            .Where(g => g.StudentId == studentId && g.NumericGrade > 0)
+            .ToList();
+
+        if (!grades.Any())
+            return 0.0;
+
+        // Using LINQ Aggregate for calculation
+        return grades.Average(g => g.NumericGrade);
+    }
+}

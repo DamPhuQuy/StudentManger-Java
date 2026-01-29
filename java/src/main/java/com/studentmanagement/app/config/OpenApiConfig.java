@@ -31,6 +31,7 @@ public class OpenApiConfig {
                 .servers(List.of(
                         new Server()
                                 .url("http://localhost:8080")
+                                
                                 .description("Development Server"),
                         new Server()
                                 .url("https://api.studentmanagement.com")
